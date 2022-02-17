@@ -27,4 +27,5 @@ status = stimer(1);
  
 ## from Simulink
 
-![image](https://user-images.githubusercontent.com/11412210/154200053-0060274e-d7d9-42b8-9103-c396cd8d8dcc.png)
+![Simulink library](https://user-images.githubusercontent.com/11412210/154407877-b18fe958-b94a-40ee-8476-9bf5fcee4a84.png)
+
