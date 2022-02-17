@@ -5,8 +5,8 @@
 README.md export-ignore
 build_options.mk export-ignore
 Makefile export-ignore
-stimer.mltbx
-stimer.prj
+stimer.mltbx export-ignore
+stimer.prj export-ignore
 
 # Auto detect text files and perform LF normalization
 * text=auto
