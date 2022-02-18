@@ -25,7 +25,7 @@ function status = stimer( varargin )
     end
 
     if nargin < 1
-        error( 'Timeout index must be supplied' );
+        error( 'Timer index must be supplied' );
     end
 
     index = fix( varargin{1} );
