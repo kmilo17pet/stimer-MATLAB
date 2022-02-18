@@ -28,11 +28,10 @@ function status = stimer( varargin )
         error( 'Timeout index must be supplied' );
     end
 
-    index = varargin{1};
+    index = fix( varargin{1} );
     if any(~isnumeric(index)) || any(isnan(index)) || isempty(index) || any(isinf(index)) || any(~isreal(index))
         error( 'Index argument not allowed, use only integer values from 1 to 256' );
     end
-    index = fix(index);
     newtime = 0;
 
     if any( index <= 0 | index > 256 )
@@ -51,10 +50,10 @@ function status = stimer( varargin )
     
     if ~isscalar( index ) %operate on multiple requests
         if 1 == nargin 
-            status = arrayfun( @timeout, index );
+            status = arrayfun( @stimer, index );
             return;
         elseif 2 == nargin
-            status = arrayfun( @timeout, index, varargin{ 2 } );
+            status = arrayfun( @stimer, index, varargin{ 2 } );
             return;
         end
     end
