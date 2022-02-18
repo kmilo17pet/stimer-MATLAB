@@ -9,7 +9,7 @@
 
 This function instantiates up to 256 timers and each of them should be selected by using its own index. To set a new countdown for the selected timer, just pass the value as the second argument.</param.description>
     <param.screenshot>D:\Camilo\Pictures\timer.png</param.screenshot>
-    <param.version>2.0.6</param.version>
+    <param.version>2.1.0</param.version>
     <param.output>${PROJECT_ROOT}\stimer.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -101,6 +101,8 @@ stimer.prj
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\.git</file>
+      <file>${PROJECT_ROOT}\.gitattributes</file>
+      <file>${PROJECT_ROOT}\fx_stimer_ctrl.m</file>
       <file>${PROJECT_ROOT}\LICENSE</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\slblocks.m</file>
