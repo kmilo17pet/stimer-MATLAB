@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3322883402" file="D:\Camilo\Documents\GitHub\stimer-MATLAB\stimer.prj" location="D:\Camilo\Documents\GitHub\stimer-MATLAB" name="stimer" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="323089942" file="D:\Camilo\Documents\GitHub\stimer-MATLAB\stimer.prj" location="D:\Camilo\Documents\GitHub\stimer-MATLAB" name="stimer" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>stimer</param.appname>
     <param.authnamewatermark>Juan Camilo Gomez Cadavid</param.authnamewatermark>
     <param.email>kmilo17pet@gmail.com</param.email>
@@ -9,11 +9,20 @@
 
 This function instantiates up to 256 timers and each of them should be selected by using its own index. To set a new countdown for the selected timer, just pass the value as the second argument.</param.description>
     <param.screenshot>D:\Camilo\Pictures\timer.png</param.screenshot>
-    <param.version>2.1.0</param.version>
+    <param.version>2.1.1</param.version>
     <param.output>${PROJECT_ROOT}\stimer.mltbx</param.output>
-    <param.products.name />
-    <param.products.id />
-    <param.products.version />
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Simulink</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>2</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.11</item>
+      <item>10.4</item>
+    </param.products.version>
     <param.platforms />
     <param.guid>728006c9-883e-4cc9-a38d-9047a6fff01e</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
@@ -65,9 +74,6 @@ stimer.prj
     <unset>
       <param.company />
       <param.output />
-      <param.products.name />
-      <param.products.id />
-      <param.products.version />
       <param.platforms />
       <param.exclude.pcodedmfiles />
       <param.examples />

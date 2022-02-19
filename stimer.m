@@ -16,14 +16,7 @@
 %
 %   Author: J. Camilo Gomez C.
 function status = stimer( varargin )
-    if nargin < 1 
-        error( 'Timer index must be supplied' );
-    end
-
-    if nargin > 2
-        error( 'Too many input arguments' );
-    end
-    
+    narginchk( 1, 2 );
     isBadArgument = @( arg ) any( ~isnumeric( arg ) ) || any( isnan( arg ) ) || isempty( arg ) || any( isinf( arg) ) || any( ~isreal( arg ) );
     
     varargin{ 1 } = fix( varargin{1} );
