@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="323089942" file="D:\Camilo\Documents\GitHub\stimer-MATLAB\stimer.prj" location="D:\Camilo\Documents\GitHub\stimer-MATLAB" name="stimer" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="427727263" file="D:\Camilo\Documents\GitHub\stimer-MATLAB\stimer.prj" location="D:\Camilo\Documents\GitHub\stimer-MATLAB" name="stimer" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>stimer</param.appname>
     <param.authnamewatermark>Juan Camilo Gomez Cadavid</param.authnamewatermark>
     <param.email>kmilo17pet@gmail.com</param.email>
@@ -9,7 +9,7 @@
 
 This function instantiates up to 256 timers and each of them should be selected by using its own index. To set a new countdown for the selected timer, just pass the value as the second argument.</param.description>
     <param.screenshot>D:\Camilo\Pictures\timer.png</param.screenshot>
-    <param.version>2.1.1</param.version>
+    <param.version>2.1.2</param.version>
     <param.output>${PROJECT_ROOT}\stimer.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
@@ -32,6 +32,7 @@ This function instantiates up to 256 timers and each of them should be selected 
 % A single file in the toolbox folder:
 stimer.mltbx
 stimer.prj
+slib_ref_stimer.slx
 %
 % A single file in a subfolder of the toolbox folder:
 % example/.svn
