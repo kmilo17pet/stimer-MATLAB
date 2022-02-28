@@ -10,22 +10,27 @@ function status = fx_stimer_ctrl( varargin )
     end
 
     index = varargin{ 1 };
-    status = struct( 'expired', false, 'elapsed', 0, 'remaining', 0, 'value', 0 );
+    elapsed = 0;
+    remaining = 0;
+    expired = 0;
+    value = 0;
     if 1 == nargin 
         if xTimer( index ).tv > 0
-            status.elapsed = toc( uint64( 0 ) ) - xTimer( index ).st;
-            status.remaining = xTimer( index ).tv - status.elapsed;
-            if status.remaining < 0
-                status.remaining = 0;
+            elapsed = toc( uint64( 0 ) ) - xTimer( index ).st;
+            remaining = xTimer( index ).tv - elapsed;
+            if remaining < 0
+                remaining = 0;
             end
-            status.expired = status.elapsed >= xTimer( index ).tv;
-            status.value = xTimer( index ).tv;
+            expired = elapsed >= xTimer( index ).tv;
+            value = xTimer( index ).tv;
         end
     elseif 2 == nargin
         xTimer( index ).tv = varargin{ 2 };
         xTimer( index ).st = toc( uint64( 0 ) );
-        status.value = xTimer( index ).tv;
-        status.remaining = xTimer( index ).tv;
+        value = xTimer( index ).tv;
+        remaining = xTimer( index ).tv;
     end
+
+    status = [ expired, elapsed, remaining, value ];
 end
 

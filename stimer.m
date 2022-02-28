@@ -19,7 +19,7 @@ function status = stimer( varargin )
     narginchk( 1, 2 );
     isBadArgument = @( arg ) any( ~isnumeric( arg ) ) || any( isnan( arg ) ) || isempty( arg ) || any( isinf( arg) ) || any( ~isreal( arg ) );
     
-    varargin{ 1 } = fix( varargin{1} );
+    varargin{ 1 } = fix( varargin{ 1 } );
     if isBadArgument( varargin{ 1 } )
         error( 'Index argument not allowed, use only integer values from 1 to 256' );
     end
@@ -36,11 +36,12 @@ function status = stimer( varargin )
             error( 'Time value can not be negative, use only positive real numbers' );
         end        
     end
-    
+
     if ~isscalar( varargin{ 1 } ) %operate on multiple requests
         status = arrayfun( @stimer, varargin{:} );
         return;
     end
 
-    status = fx_stimer_ctrl( varargin{:} );
+    s = fx_stimer_ctrl( varargin{:} );
+    status = stimer_status( s(1), s(2), s(3), s(4) );
 end
