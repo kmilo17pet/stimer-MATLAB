@@ -10,9 +10,13 @@
 %
 %   stimer(1,10); set a new countdown to 10 seconds for the timer 1.
 %
+%   stimer(3,minutes(2)); set a new countdown to 2 minutes for the timer 3.
+%
+%   stimer( [1 2 3], [minutes(5) hours(2) 30] ); set multiple timers simultaneously.
+%
 %   status = stimer(1); get the current status of timer 1
 %
-%   See also TIMER, CPUTIME, TIC, TOC.
+%   See also TIMER, CPUTIME, TIC, TOC, DURATION, MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS, YEARS.
 %
 %   Author: J. Camilo Gomez C.
 function status = stimer( varargin )
@@ -29,6 +33,9 @@ function status = stimer( varargin )
     end
 
     if 2 == nargin 
+        if isduration( varargin{ 2 } )
+            varargin{ 2 } = seconds( varargin{ 2 } );
+        end
         if isBadArgument( varargin{ 2 } )
             error( 'Time value argument not allowed, use only positive real numbers' );
         end

@@ -9,7 +9,7 @@
 
 This function instantiates up to 256 timers and each of them should be selected by using its own index. To set a new countdown for the selected timer, just pass the value as the second argument.</param.description>
     <param.screenshot>D:\Camilo\Pictures\timer.png</param.screenshot>
-    <param.version>2.1.4</param.version>
+    <param.version>2.1.5</param.version>
     <param.output>${PROJECT_ROOT}\stimer.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
