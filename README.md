@@ -20,6 +20,16 @@ set a new countdown to 10 seconds for the timer 1.
 stimer(1,10); 
 ``` 
 
+set a new countdown to 2 minutes for the timer 3.
+```
+stimer(3,minutes(2));
+```
+
+set multiple timers simultaneously.
+```
+stimer( [1 2 3], [minutes(5) hours(2) 30] );
+```
+
 get the current status of timer 1
 ```
 status = stimer(1); 
